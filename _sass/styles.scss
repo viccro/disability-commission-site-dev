@@ -9,3 +9,64 @@
 .navbar-brand {
   font-weight: bold;
 }
+
+#mainNav .navbar-brand {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+#mainNav .navbar-brand .home-icon {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+@media only screen and (min-width: 992px) {
+  #mainNav .navbar-brand .home-icon {
+    height: 36px;
+  }
+}
+
+header.masthead .page-heading .home-title {
+  font-size: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  header.masthead .page-heading .home-title {
+    font-size: 56px;
+  }
+}
+
+// Darken hero banner overlay for accessibility contrast
+header.masthead .overlay {
+  opacity: 0.75;
+}
+
+body {
+    background-color: #F2F0EF;
+    color: #333;
+    font-family: sans-serif;
+}
+
+// Enforce minimum 16px font size site-wide
+.caption {
+  font-size: 16px !important;
+}
+
+.btn {
+  font-size: 16px !important;
+}
+
+#mainNav .navbar-brand,
+#mainNav .nav-link {
+  font-size: 16px !important;
+}
+
+footer {
+  font-size: 16px !important;
+}
+
+#contact-form,
+.floating-label-form-group {
+  font-size: 16px !important;
+}

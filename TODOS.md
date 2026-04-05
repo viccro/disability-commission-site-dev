@@ -1,0 +1,2 @@
+- Home body font is not the same color as the other pages?
+- 

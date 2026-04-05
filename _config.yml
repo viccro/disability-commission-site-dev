@@ -1,4 +1,5 @@
-title:              Arlington Disability Commission
+title:              Arlington, MA Disability Commission
+title_home:         Arlington, MA<br>Disability Commission
 title_short:        Arlington Disability
 email:              your-email@example.com
 description:        
@@ -9,9 +10,10 @@ url:                "https://arlington-ma-disability-commission.github.io"
 # Social Profiles
 # twitter_username:   SBootstrap
 # github_username:    StartBootstrap
-# facebook_username:  StartBootstrap
+# facebook_username:  ArlingtonMADisability
 # instagram_username:  
 # linkedin_username:
+# town_site_url:      https://www.arlingtonma.gov/town-governance/boards-and-committees/disability-commission
 
 # Add your google-analytics ID here to activate google analytics
 # google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
