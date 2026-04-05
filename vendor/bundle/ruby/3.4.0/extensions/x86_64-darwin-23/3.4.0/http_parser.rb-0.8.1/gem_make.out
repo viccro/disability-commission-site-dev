@@ -1,0 +1,24 @@
+current directory: /Users/viccro/Documents/OtherStuff/disability-commission-site-dev/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+/usr/local/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/viccro/Documents/OtherStuff/disability-commission-site-dev/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20260404-57023-vxd92k sitelibdir\=./.gem.20260404-57023-vxd92k clean
+
+current directory: /Users/viccro/Documents/OtherStuff/disability-commission-site-dev/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20260404-57023-vxd92k sitelibdir\=./.gem.20260404-57023-vxd92k
+compiling ruby_http_parser.c
+ruby_http_parser.c:373:17: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'long' [-Wsign-compare]
+  373 |     if (nparsed < len)
+      |         ~~~~~~~ ^ ~~~
+1 warning generated.
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.5.2/lib' not found
+
+current directory: /Users/viccro/Documents/OtherStuff/disability-commission-site-dev/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20260404-57023-vxd92k sitelibdir\=./.gem.20260404-57023-vxd92k install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20260404-57023-vxd92k
+
+current directory: /Users/viccro/Documents/OtherStuff/disability-commission-site-dev/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20260404-57023-vxd92k sitelibdir\=./.gem.20260404-57023-vxd92k clean

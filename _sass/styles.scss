@@ -1,2 +1,11 @@
 // Import Core Clean Blog SCSS
 @import "../assets/vendor/startbootstrap-clean-blog/scss/styles.scss";
+
+// Bold navbar font
+.navbar-nav .nav-link {
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
