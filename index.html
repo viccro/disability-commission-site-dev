@@ -2,14 +2,24 @@
 layout: home
 background: '/img/disability_pride_flag.png'
 ---
+<section class="intro-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto measure-66">
+				<p>The Arlington Disability Commission works to raise awareness of the rights and needs of people with disabilities, fighting for full inclusion in all aspects of community life in Arlington. Disabilities and impairments may be physical, sensory, cognitive, intellectual, or other types of chronic illness.</p>
+				<p>The Commission is made up of nine Arlington resident volunteers, the majority of whom have disabilities or have family members with disabilities. The Commission works closely with the Town's ADA (Americans with Disabilities Act) Coordinator. </p>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section class="home-action-strip">
 	<div class="container text-center">
-		<p class="lead mb-4">Take action, find support, and stay connected with commission work.</p>
+		<p>wow TODO</p>
 		<div class="home-cta-row">
-			<a class="btn btn-primary" href="{{"/report-incident/" | relative_url }}">Report an Incident</a>
-			<a class="btn btn-outline-primary" href="{{"/initiatives/#upcoming" | relative_url }}">View Events</a>
 			<a class="btn btn-outline-primary" href="{{"/get-involved/#volunteer" | relative_url }}">Join / Volunteer</a>
+			<a class="btn btn-primary" href="{{"/report-incident/" | relative_url }}">Report an Incident</a>
+			<a class="btn btn-outline-primary" href="{{"/initiatives/#upcoming" | relative_url }}">View Initiatives</a>
 		</div>
 	</div>
 </section>
@@ -17,7 +27,7 @@ background: '/img/disability_pride_flag.png'
 <section class="home-mission-block">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-md-10 mx-auto">
+			<div class="col-lg-8 col-md-10 mx-auto measure-66">
 				<h2>Short Mission</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 			</div>
@@ -28,7 +38,7 @@ background: '/img/disability_pride_flag.png'
 <section class="home-updates-block">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-md-10 mx-auto">
+			<div class="col-lg-8 col-md-10 mx-auto measure-66">
 				<h2>Latest Updates</h2>
 				{% for post in site.posts limit:3 %}
 					<div class="post-preview mb-4">

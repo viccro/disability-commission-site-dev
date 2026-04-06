@@ -67,8 +67,19 @@ header.masthead .post-heading {
 
 body {
     background-color: #F2F0EF;
-    color: #333;
+    color: #222;
     font-family: sans-serif;
+  line-height: 1.5;
+}
+
+p {
+  text-indent: 2em;
+}
+
+.post-meta,
+.copyright,
+.footer-links {
+  text-indent: 0;
 }
 
 // Enforce minimum 16px font size site-wide
@@ -114,7 +125,7 @@ footer {
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   padding: 1rem;
-  color: #333;
+  color: #222;
   text-decoration: none;
   background: #fff;
 }
@@ -185,4 +196,60 @@ footer {
 .status-pill.status-muted {
   background: #eceff1;
   color: #495057;
+}
+
+.section-pill-nav {
+  gap: 0.5rem;
+}
+
+.section-pill-nav .nav-link {
+  border: 1px solid #1f6f8b;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  color: #1f6f8b;
+  background: #fff;
+}
+
+.section-pill-nav .nav-link:hover,
+.section-pill-nav .nav-link:focus {
+  background: #1f6f8b;
+  color: #fff;
+}
+
+.section-pill-nav .nav-link:focus {
+  outline: 2px solid #1f6f8b;
+  outline-offset: 2px;
+}
+
+.measure-66 {
+  max-width: 56ch;
+  width: min(100%, 56ch);
+}
+
+.measure-66 p {
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 1400px) {
+  .content-column,
+  .content-column .col-lg-8.col-md-10.mx-auto {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .intro-block .container,
+  .home-action-strip .container,
+  .home-mission-block .container,
+  .home-updates-block .container {
+    max-width: 1400px;
+  }
+
+  .intro-block .col-lg-8.col-md-10.mx-auto:not(.measure-66),
+  .home-mission-block .col-lg-8.col-md-10.mx-auto:not(.measure-66),
+  .home-updates-block .col-lg-8.col-md-10.mx-auto:not(.measure-66) {
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
 }
