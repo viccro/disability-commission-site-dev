@@ -2,3 +2,42 @@
 layout: home
 background: '/img/disability_pride_flag.png'
 ---
+
+<section class="home-action-strip">
+	<div class="container text-center">
+		<p class="lead mb-4">Take action, find support, and stay connected with commission work.</p>
+		<div class="home-cta-row">
+			<a class="btn btn-primary" href="{{"/report-incident/" | relative_url }}">Report an Incident</a>
+			<a class="btn btn-outline-primary" href="{{"/initiatives/#upcoming" | relative_url }}">View Events</a>
+			<a class="btn btn-outline-primary" href="{{"/get-involved/#volunteer" | relative_url }}">Join / Volunteer</a>
+		</div>
+	</div>
+</section>
+
+<section class="home-mission-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<h2>Short Mission</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="home-updates-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<h2>Latest Updates</h2>
+				{% for post in site.posts limit:3 %}
+					<div class="post-preview mb-4">
+						<h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+						<p class="post-meta">Posted on {{ post.date | date: "%B %d, %Y" }}</p>
+					</div>
+				{% endfor %}
+				<a class="btn btn-secondary" href="{{"/posts/" | relative_url }}">See all updates</a>
+			</div>
+		</div>
+	</div>
+</section>

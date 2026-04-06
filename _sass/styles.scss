@@ -93,3 +93,96 @@ footer {
 .floating-label-form-group {
   font-size: 16px !important;
 }
+
+.page-section {
+  margin-bottom: 2rem;
+}
+
+.hub-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .hub-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.hub-card {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #333;
+  text-decoration: none;
+  background: #fff;
+}
+
+.hub-card:hover {
+  text-decoration: none;
+  border-color: #888;
+}
+
+.home-action-strip {
+  padding: 2rem 0;
+}
+
+.home-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.home-mission-block,
+.home-updates-block {
+  padding: 2rem 0;
+}
+
+.home-updates-block {
+  background: #fff;
+}
+
+#mainNav .nav-item-cta {
+  margin-left: 0.5rem;
+}
+
+#mainNav .nav-link-cta {
+  background: #1f6f8b;
+  color: #fff !important;
+  border-radius: 0.35rem;
+  padding: 0.35rem 0.7rem;
+}
+
+#mainNav .nav-link-cta:hover {
+  background: #155368;
+}
+
+.compact-status-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.compact-status-item {
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.status-pill {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #dff3ea;
+  color: #145a42;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-pill.status-muted {
+  background: #eceff1;
+  color: #495057;
+}
