@@ -72,8 +72,21 @@ body {
   line-height: 1.5;
 }
 
-p {
-  // text-indent: 2em;
+h3 {
+  font-size: 24px;
+}
+
+p:has(+ ul),
+p:has(+ ol) {
+  margin-bottom: 10px;
+}
+
+/* Fallback for browsers that do not support :has() */
+@supports not selector(p:has(+ ul)) {
+  p + ul,
+  p + ol {
+    margin-top: -0.4rem;
+  }
 }
 
 .post-meta,
@@ -89,6 +102,41 @@ p {
 
 .btn {
   font-size: 16px !important;
+}
+
+.btn-outline-primary,
+.section-pill-nav .nav-link {
+  color: #005c6f;
+  border-color: #005c6f;
+  background: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 92, 111, 0.18);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle,
+.section-pill-nav .nav-link:hover,
+.section-pill-nav .nav-link:focus,
+.section-pill-nav .nav-link.active,
+.show > .section-pill-nav .nav-link.dropdown-toggle {
+  color: #fff;
+  background-color: #005c6f;
+  border-color: #005c6f;
+  box-shadow: 0 4px 10px rgba(0, 92, 111, 0.22);
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus,
+.section-pill-nav .nav-link:focus,
+.section-pill-nav .nav-link.active:focus,
+.show > .section-pill-nav .nav-link.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 92, 111, 0.25), 0 4px 10px rgba(0, 92, 111, 0.22);
 }
 
 #mainNav .navbar-brand,
@@ -140,10 +188,28 @@ footer {
 }
 
 .home-cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 44rem;
+  margin: 0 auto;
   gap: 0.75rem;
+}
+
+.home-cta-row .btn {
+  width: 100%;
+  min-height: 4.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  padding: 0.85rem 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-cta-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .mission-block,
@@ -203,21 +269,18 @@ footer {
 }
 
 .section-pill-nav .nav-link {
-  border: 1px solid #1f6f8b;
+  border: 1px solid;
   border-radius: 999px;
   padding: 0.35rem 0.8rem;
-  color: #1f6f8b;
-  background: #fff;
 }
 
 .section-pill-nav .nav-link:hover,
 .section-pill-nav .nav-link:focus {
-  background: #1f6f8b;
-  color: #fff;
+  text-decoration: none;
 }
 
 .section-pill-nav .nav-link:focus {
-  outline: 2px solid #1f6f8b;
+  outline: 2px solid #005c6f;
   outline-offset: 2px;
 }
 
@@ -252,4 +315,8 @@ footer {
     flex: 0 0 83.333333%;
     max-width: 83.333333%;
   }
+}
+
+li {
+  margin-bottom: 10px; 
 }
