@@ -42,6 +42,29 @@ header.masthead .overlay {
   opacity: 0.75;
 }
 
+header.masthead {
+  height: min(70vh, 560px);
+  min-height: 320px;
+  overflow: hidden;
+}
+
+header.masthead .container,
+header.masthead .container .row,
+header.masthead .page-heading,
+header.masthead .site-heading,
+header.masthead .post-heading {
+  height: 100%;
+}
+
+header.masthead .page-heading,
+header.masthead .site-heading,
+header.masthead .post-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
 body {
     background-color: #F2F0EF;
     color: #333;
