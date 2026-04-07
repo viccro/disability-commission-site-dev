@@ -72,6 +72,18 @@ body {
   line-height: 1.5;
 }
 
+a,
+a:visited {
+  color: #005c6f;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #005c6f;
+  text-decoration: underline;
+}
+
 h3 {
   font-size: 24px;
 }
@@ -113,6 +125,7 @@ p:has(+ ol) {
   font-weight: 600;
   box-shadow: 0 2px 6px rgba(0, 92, 111, 0.18);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
 }
 
 .btn-outline-primary:hover,
@@ -206,6 +219,30 @@ footer {
   padding: 0.85rem 1rem;
 }
 
+.home-cta-row .btn-outline-primary {
+  color: #fff;
+  background-color: #005c6f;
+  border-color: #005c6f;
+  border-radius: 0.45rem;
+}
+
+.home-cta-row .btn-outline-primary:hover,
+.home-cta-row .btn-outline-primary:focus,
+.home-cta-row .btn-outline-primary:active,
+.home-cta-row .btn-outline-primary:not(:disabled):not(.disabled):active,
+.home-cta-row .show > .btn-outline-primary.dropdown-toggle {
+  color: #005c6f;
+  background-color: #fff;
+  border-color: #005c6f;
+}
+
+.home-cta-row .btn-outline-primary:focus,
+.home-cta-row .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.home-cta-row .show > .btn-outline-primary.dropdown-toggle:focus {
+  outline: 2px solid #005c6f;
+  outline-offset: 2px;
+}
+
 @media only screen and (min-width: 768px) {
   .home-cta-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -280,6 +317,37 @@ footer {
 }
 
 .section-pill-nav .nav-link:focus {
+  outline: 2px solid #005c6f;
+  outline-offset: 2px;
+}
+
+.calendar-cta-wrap {
+  text-align: center;
+}
+
+.btn-calendar-cta {
+  color: #fff;
+  background-color: #005c6f;
+  border: 1px solid #005c6f;
+  border-radius: 0.45rem;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 92, 111, 0.18);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-calendar-cta:hover,
+.btn-calendar-cta:focus,
+.btn-calendar-cta:active {
+  color: #005c6f;
+  background-color: #fff;
+  border-color: #005c6f;
+  box-shadow: 0 4px 10px rgba(0, 92, 111, 0.22);
+  text-decoration: none;
+}
+
+.btn-calendar-cta:focus {
   outline: 2px solid #005c6f;
   outline-offset: 2px;
 }
