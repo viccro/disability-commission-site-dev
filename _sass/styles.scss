@@ -88,6 +88,22 @@ h3 {
   font-size: 24px;
 }
 
+.content-column p,
+.home-content-shell p {
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-column ul,
+.content-column ol,
+.home-content-shell ul,
+.home-content-shell ol {
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 p:has(+ ul),
 p:has(+ ol) {
   margin-bottom: 10px;
@@ -325,7 +341,8 @@ footer {
   text-align: center;
 }
 
-.btn-calendar-cta {
+.btn-calendar-cta,
+.btn-calendar-cta:visited {
   color: #fff;
   background-color: #005c6f;
   border: 1px solid #005c6f;
