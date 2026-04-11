@@ -7,6 +7,9 @@ author:             Arlington MA Disability Commission
 baseurl:            "/"
 url:                "https://arlington-ma-disability-commission.github.io"
 
+# Site-wide feature toggles
+show_commissioner_recruiting: true
+
 # Social Profiles
 # twitter_username:   SBootstrap
 # github_username:    StartBootstrap

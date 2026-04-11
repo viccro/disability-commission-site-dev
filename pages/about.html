@@ -1,8 +1,8 @@
----
+--- 
 layout: page
-title: About the Commission
+title: About the Commission 
 background: '/img/bg-about.jpg'
-permalink: /about/
+permalink: /about/ 
 ---
 
 <nav class="mb-4" aria-label="About page sections">
@@ -13,75 +13,74 @@ permalink: /about/
 		<li class="nav-item">
 			<a class="nav-link" href="#members">Commissioners</a>
 		</li>
+		{% if site.show_commissioner_recruiting %}
 		<li class="nav-item">
+			<a class="nav-link" href="#join-the-commission">Join us!</a>
+		</li>
+		{% endif %}
+		<!-- <li class="nav-item">
 			<a class="nav-link" href="#history">History</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#structure">Structure</a>
-		</li>
+		</li> -->
 	</ul>
 </nav>
 
 <section id="mission" class="page-section mission-block">
 	<h2>Mission & Scope</h2>
-	<p>The Commission provides information, referral, guidance, and technical assistance to ensure that people with physical, sensory, cognitive, and other disabilities have equal access to Town facilities, services, and programs. See more TODO?</p>
-	<p>Commission on Disability requirements, including membership, are outlined in <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40/Section8j">Massachusetts General Law (MGL) Chapter 40, Section 8J</a>.</p>
+	<p>The Commission provides information, referral, guidance, and technical
+	assistance to ensure that people with physical, sensory, cognitive, and
+	other disabilities have equal access to Town facilities, services, and
+	programs. See more TODO?</p>
+	<p>Requirements for the Disability Commission, including membership, are outlined
+	in <a
+	href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40/Section8j">Massachusetts
+	General Law (MGL) Chapter 40, Section 8J</a>.</p>
 	<p>Some examples of how the Commission can support the Town include:</p>
 	<ul>
-		<li>Advising and assisting local officials with compliance to federal and state disability laws</li>
-		<li>Partnering with people with disabilities to make their voices heard in vital city or town affairs</li>
-		<li>Assisting the city or town with ensuring their ADA Self-Evaluation meets ADA requirements</li>
-		<li>Assisting the city or town with implementation and upkeep of their ADA Transition Plan</li>
+		<li>Advising and assisting local officials with compliance to federal
+		and state disability laws</li>
+		<li>Partnering with people with disabilities to make their voices heard
+		in vital city or town affairs</li>
+		<li>Assisting the city or town with ensuring their ADA Self-Evaluation
+		meets ADA requirements</li>
+		<li>Assisting the city or town with implementation and upkeep of their
+		ADA Transition Plan</li>
 		<li>Sharing accessibility concerns and reminders to developers</li>
-		<li>Reviewing projects that come before the local Planning Board, Town Meeting, City Council, and other municipal groups</li>
-		<li>Coordinating with MOD, advocates, and elected officials to keep informed about applicable disability laws and regulations</li>
+		<li>Reviewing projects that come before the local Planning Board, Town
+		Meeting, City Council, and other municipal groups</li>
+		<li>Coordinating with MOD, advocates, and elected officials to keep
+		informed about applicable disability laws and regulations</li>
 		<li>And more!</li>
 	</ul>
 </section>
 
 <section id="members" class="page-section">
-	<h2>Meet the Commission</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-
-	<div class="accordion" id="memberAccordion">
-			<div class="card">
-				<div class="card-header" id="memberOneHeading">
-					<h3 class="mb-0">
-						<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#memberOne" aria-expanded="true" aria-controls="memberOne">
-							Commissioner Name One
-						</button>
-					</h3>
-				</div>
-				<div id="memberOne" class="collapse show" aria-labelledby="memberOneHeading" data-parent="#memberAccordion">
-					<div class="card-body">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-header" id="memberTwoHeading">
-					<h3 class="mb-0">
-						<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#memberTwo" aria-expanded="false" aria-controls="memberTwo">
-							Commissioner Name Two
-						</button>
-					</h3>
-				</div>
-				<div id="memberTwo" class="collapse" aria-labelledby="memberTwoHeading" data-parent="#memberAccordion">
-					<div class="card-body">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-					</div>
-				</div>
-			</div>
+	<h2>Our Commissioners</h2>
+	<p>The Commission is made up of nine Arlington resident volunteers. These
+	volunteers are all approved by the Select Board and appointed by the Town
+	Manager. The majority of the Commissioners have disabilities, which is
+	required by state law. Other Commissioners have family members with
+	disabilities or are strong allies. The Commission works closely with the
+	Town's ADA (Americans with Disabilities Act) Coordinator.</p>
+	<p>A list of the current Commissioners can be found on the <a
+	href="https://www.arlingtonma.gov/town-governance/boards-and-committees/disability-commission">Town's
+	webpage</a>.</p>
+	{% if site.show_commissioner_recruiting %}
+	<div id="join-the-commission" class="recruiting-highlight" role="note" aria-label="Commission
+	recruiting notice">
+		<h3 class="text-center">Join the Commission!</h3>
+		<p>We are looking for new commissioners. If you are interested, take a
+		look at <a href="{{ '/get-involved/#join-the-disability-commission' |
+		relative_url }}">how to volunteer</a>.</p>
 	</div>
+	{% endif %}
 </section>
 
-<section id="history" class="page-section">
+<!-- <section id="history" class="page-section">
 	<h2>History</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</section>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint
+	occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+	anim id est laborum.</p>
+</section> -->
 
-<section id="structure" class="page-section">
-	<h2>Structure</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</section>
+
 

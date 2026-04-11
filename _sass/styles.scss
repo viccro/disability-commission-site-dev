@@ -369,6 +369,41 @@ footer {
   outline-offset: 2px;
 }
 
+.recruiting-highlight {
+  margin-top: 1rem;
+  padding: 0.55rem 1rem 0.85rem;
+  border: 2px solid #005c6f;
+  border-left-width: 0.4rem;
+  border-radius: 0.35rem;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.recruiting-highlight p {
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.recruiting-highlight a,
+.recruiting-highlight a:visited {
+  color: #005c6f;
+  font-weight: 700;
+}
+
+.recruiting-highlight a:hover,
+.recruiting-highlight a:focus {
+  color: #004452;
+}
+
+address {
+  display: block;
+  font-style: normal;
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+}
+
 .measure-66 {
   max-width: 56ch;
   width: min(100%, 56ch);
