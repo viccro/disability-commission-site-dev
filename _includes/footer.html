@@ -68,13 +68,14 @@
           </li>
           {% endif %}
         </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
-        <p class="footer-links text-muted">
+        <p class="footer-links text-muted text-center">
           <a href="{{"/contact" | relative_url }}">Contact</a> |
           <a href="{{"/posts/" | relative_url }}">Meeting Minutes & Agendas</a> |
           <a href="{{"/resources/" | relative_url }}">Accessibility & Resources</a> |
           <a href="{{"/posts/" | relative_url }}">Documents / Reports</a>
         </p>
+        <p class="text-muted text-center small mb-2">This site provides general information and is not legal advice.</p>
+        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
       </div>
     </div>
   </div>
