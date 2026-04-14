@@ -88,6 +88,27 @@ h3 {
   font-size: 24px;
 }
 
+.post-subtitle {
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 500;
+  color: #4b4f52;
+  margin-top: 0.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.post-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .post-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
 .page-section h3 {
   margin-top: 1.5rem;
   margin-bottom: 0.65rem;
