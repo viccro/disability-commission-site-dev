@@ -6,6 +6,15 @@
   font-weight: bold;
 }
 
+@media only screen and (max-width: 991.98px) {
+  #mainNav.navbar-light .navbar-nav .nav-link,
+  #mainNav.navbar-light .navbar-nav .nav-link:visited,
+  #mainNav.navbar-light .navbar-nav .nav-link:hover,
+  #mainNav.navbar-light .navbar-nav .nav-link:focus {
+    color: #005c6f;
+  }
+}
+
 .navbar-brand {
   font-weight: bold;
 }
@@ -101,6 +110,10 @@ h3 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+article.no-bg-page {
+  margin-top: 30px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -225,12 +238,7 @@ footer {
 .hub-cards {
   display: grid;
   gap: 1rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .hub-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 }
 
 .hub-card {
@@ -241,6 +249,10 @@ footer {
   color: #222;
   text-decoration: none;
   background: #fff;
+}
+
+.hub-card h2 {
+  overflow-wrap: anywhere;
 }
 
 .hub-card:hover {

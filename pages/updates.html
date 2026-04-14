@@ -8,34 +8,28 @@ permalink: /updates/
 
 {% assign all_tags = site.tags | sort %}
 
-<section id="updates-overview" class="page-section">
+<!-- <section id="updates-overview" class="page-section">
   <h2>Latest Commission Updates</h2>
-  <p>Browse recent announcements, meeting updates, and news from the Commission.</p>
-</section>
+</section> -->
 
 <section id="filter-by-tag" class="page-section">
-  <h2>Filter By Tag</h2>
   {% if all_tags.size > 0 %}
-  <p class="mb-2">Select a tag to filter updates:</p>
-  <div class="mb-3" aria-label="Update tags">
-    <a class="btn btn-sm btn-outline-secondary mb-2 mr-2 js-tag-chip" href="#tag=all" data-tag="">All Updates</a>
+  <p style="margin-left: 0; margin-top: 0;">Select a tag to filter updates:</p>
+  <ul class="nav nav-pills flex-wrap section-pill-nav mb-3" aria-label="Update tags">
+    <li class="nav-item"><a class="nav-link js-tag-chip" href="#tag=all" data-tag="">All Updates</a></li>
     {% for tag_data in all_tags %}
       {% assign tag_name = tag_data[0] %}
-      <a
-        class="btn btn-sm btn-outline-secondary mb-2 mr-2 js-tag-chip"
-        href="#tag={{ tag_name | uri_escape }}"
-        data-tag="{{ tag_name | downcase }}"
-      >{{ tag_name }}</a>
+      <li class="nav-item"><a class="nav-link js-tag-chip" href="#tag={{ tag_name | uri_escape }}" data-tag="{{ tag_name | downcase }}">{{ tag_name }}</a></li>
     {% endfor %}
-  </div>
-  <p id="updates-filter-status" class="text-muted small mb-0" aria-live="polite"></p>
+  </ul>
+  <p id="updates-filter-status" class="text-muted small mb-0" aria-live="polite" style="margin-left: 0;"></p>
   {% else %}
   <p class="text-muted">No tags have been added to updates yet. Showing all posts below.</p>
   {% endif %}
 </section>
 
 <section id="updates-list" class="page-section">
-  <h2>All Updates</h2>
+  <h2>Updates</h2>
   {% for post in site.posts %}
   <article class="post-preview js-update-post" data-tags="{% if post.tags %}{{ post.tags | join: ',' | downcase }}{% endif %}">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -56,7 +50,9 @@ permalink: /updates/
   </article>
   <hr class="js-update-post-divider">
   {% endfor %}
-  <p><a class="btn btn-secondary" href="{{"/posts/" | relative_url }}">Open Paginated Archive</a></p>
+  <div class="text-center mt-4">
+    <a class="btn btn-calendar-cta" href="{{"/posts/" | relative_url }}">See More &rarr;</a>
+  </div>
 </section>
 
 {% if all_tags.size > 0 %}
@@ -101,8 +97,7 @@ permalink: /updates/
         var isAll = chipTag === '';
         var selected = (!tag && isAll) || (tag && chipTag === tag);
 
-        chip.classList.toggle('btn-secondary', selected);
-        chip.classList.toggle('btn-outline-secondary', !selected);
+        chip.classList.toggle('active', selected);
       });
 
       if (status) {
