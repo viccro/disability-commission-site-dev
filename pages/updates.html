@@ -18,7 +18,7 @@ permalink: /updates/
   {% if all_tags.size > 0 %}
   <p class="mb-2">Select a tag to filter updates:</p>
   <div class="mb-3" aria-label="Update tags">
-    <a class="btn btn-sm btn-outline-secondary mb-2 mr-2 js-tag-chip" href="#">All Updates</a>
+    <a class="btn btn-sm btn-outline-secondary mb-2 mr-2 js-tag-chip" href="#tag=all" data-tag="">All Updates</a>
     {% for tag_data in all_tags %}
       {% assign tag_name = tag_data[0] %}
       <a
@@ -72,7 +72,8 @@ permalink: /updates/
         return '';
       }
 
-      return decodeURIComponent(window.location.hash.slice(5)).toLowerCase();
+      var tag = decodeURIComponent(window.location.hash.slice(5)).toLowerCase();
+      return tag === 'all' ? '' : tag;
     }
 
     function setFilter() {
@@ -97,7 +98,7 @@ permalink: /updates/
 
       chips.forEach(function (chip) {
         var chipTag = (chip.getAttribute('data-tag') || '').toLowerCase();
-        var isAll = chip.getAttribute('href') === '#';
+        var isAll = chipTag === '';
         var selected = (!tag && isAll) || (tag && chipTag === tag);
 
         chip.classList.toggle('btn-secondary', selected);
