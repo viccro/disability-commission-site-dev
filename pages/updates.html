@@ -15,16 +15,17 @@ permalink: /updates/
 <section id="filter-by-tag" class="page-section">
   {% if all_tags.size > 0 %}
   <p style="margin-left: 0; margin-top: 0;">Select a tag to filter updates:</p>
-  <ul class="nav nav-pills flex-wrap section-pill-nav mb-3" aria-label="Update
-  tags">
-    <li class="nav-item"><a class="nav-link js-tag-chip" href="#tag=all"
-    data-tag="">All Updates</a></li>
-    {% for tag_data in all_tags %} {% assign tag_name = tag_data[0] %}
-      <li class="nav-item"><a class="nav-link js-tag-chip" href="#tag={{
-      tag_name | uri_escape }}" data-tag="{{ tag_name | downcase }}">{{ tag_name
-      }}</a></li>
-    {% endfor %}
-  </ul>
+  <nav aria-label="Update tags">
+    <ul class="nav nav-pills flex-wrap section-pill-nav mb-3">
+      <li class="nav-item"><a class="nav-link js-tag-chip" href="#tag=all"
+      data-tag="">All Updates</a></li>
+      {% for tag_data in all_tags %} {% assign tag_name = tag_data[0] %}
+        <li class="nav-item"><a class="nav-link js-tag-chip" href="#tag={{
+        tag_name | uri_escape }}" data-tag="{{ tag_name | downcase }}">{{ tag_name
+        }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
   <p id="updates-filter-status" class="text-muted small mb-0" aria-live="polite"
   style="margin-left: 0;"></p>
   {% else %}
@@ -56,7 +57,7 @@ permalink: /updates/
   {% endfor %}
   <div class="text-center mt-4">
     <a class="btn btn-calendar-cta" href="{{"/posts/" | relative_url }}">See
-    More &rarr;</a>
+    all updates &rarr;</a>
   </div>
 </section>
 
